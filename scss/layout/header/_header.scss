@@ -1,0 +1,16 @@
+
+@use "./logo";
+@use "./nav";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 170px;
+
+  .header__nav-list {
+    @media (max-width: 500px) { // TODO
+      display: none;
+    }
+  }
+}

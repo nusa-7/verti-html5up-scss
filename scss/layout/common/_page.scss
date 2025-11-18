@@ -1,5 +1,5 @@
 @use "../../variables/general";
-
+@use "../header/header";
 body {
   font-family: general.$primary-font ;
   background-color: general.$background-color;
