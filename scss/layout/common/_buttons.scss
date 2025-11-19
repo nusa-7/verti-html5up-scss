@@ -1,15 +1,21 @@
 @use "../../variables/general";
-
+@use "../../mixins/mixins";
 .btn {
+  margin: 10px 0;
   padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
   background-color: general.$secondary-color;
   color: general.$white-color;
   text-decoration: none;
   font-weight: 800;
-  display: block;
-  border-radius: 5px;
-  margin: 10px 0;
-  text-align: center;
+  @include mixins.mobile() {
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
 }
 
 .btn-large {
