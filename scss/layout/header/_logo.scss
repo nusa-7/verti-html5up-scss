@@ -1,10 +1,11 @@
 @use "../../variables/general";
 .header__logo {
-  font-size: 2.9375em;
   background-color: general.$logo-color;
   color: general.$white-color;
   padding: 8px;
   border-radius: 5px;
   font-weight: bold;
-  // TODO add correct font
+  font-family: general.$secondary-font;
+  font-size: 3.25em;
+  line-height: 1em;
 }
