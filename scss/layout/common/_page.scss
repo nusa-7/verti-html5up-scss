@@ -1,6 +1,7 @@
 @use "../../variables/general";
 @use "../header/header";
 @use "../banner/banner";
+@use "../common/buttons";
 body {
   font-family: general.$primary-font ;
   background-color: general.$background-color;
