@@ -1,16 +1,30 @@
 @use "../../variables/general";
-
+@use "../../mixins/mixins";
 main {
   background-color: general.$white-color;
-  padding: 20px;
+  padding: 80px 20px;
   margin-bottom: 50px;
   box-shadow: 0 5px #0000000d;
   .col-4 .container {
     width: 100%;
   }
-  img { border-radius: 10px;}
+  img { border-radius: 10px; width: 90%;}
   h2 { margin-bottom: 20px; font-size: 2.25em;}
+  .col-8 { padding: 0 50px;}
   .col-8 h2 { font-size: 2.25em; }
   p { line-height: 2.5em; margin-bottom: 20px; color: general.$text-color;}
   a { color: general.$secondary-color; }
+
+}
+// overide container on tablet
+@include mixins.tablet() {
+  main .container .row { flex-direction: column-reverse;}
+  .col-4 .container .row { flex-direction: row;}
+}
+@include mixins.mobile() {
+  .col-6 { width: 50%; }
+  main { padding: 20px 0; }
+  main .col-8 { padding: 20px;}
+  main .container .row { flex-direction: column-reverse;}
+  .col-4 .container .row { flex-direction: row;}
 }

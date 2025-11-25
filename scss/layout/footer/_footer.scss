@@ -1,5 +1,6 @@
 @use "../../variables/general";
 .footer {
+  padding: 60px 0;
   .footer__link { display: block; color: general.$text-color; line-height: 2em;}
   i {
     background-color: general.$icon-color;

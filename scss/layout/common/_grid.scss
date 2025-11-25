@@ -16,7 +16,9 @@ $base: math.div(100%, $columns);
   .row {
     display: flex;
     flex-wrap: wrap;
-    @include mixins.tablet-portrait() { display: block; }
+    @include mixins.mobile() { flex-wrap: wrap!important;}
+    @include mixins.tablet() { flex-wrap: wrap!important;}
+    @include mixins.tablet-portrait() { flex-wrap: wrap!important;}
   }
 }
 @for $i from 1 through $columns {
@@ -26,5 +28,14 @@ $base: math.div(100%, $columns);
     @media #{general.$desktop} {
       width: $base * $i;
     }
+    @media #{general.$tablet} {
+      width: $base * $i;
+    }
   }
+}
+
+@include mixins.tablet() {
+  .col-4 { width: 100%; }
+  .col-3 { width: 50%; }
+  .col-8 { width: 100%; }
 }
